@@ -16,7 +16,7 @@ n = st.sidebar.selectbox("Jumlah ulasan:", [10,50,100,500,1000], index=2)
 if st.sidebar.button("Jalankan Analisis"):
     @st.cache_data
     def scrape(n):
-        data, _ = gp_reviews("com.linecorp.line", lang="id", country="id",
+        data, _ = gp_reviews("jp.naver.line.android", lang="id", country="id",
                              sort=Sort.NEWEST, count=n)
         return pd.DataFrame(data)[["content"]]
 
