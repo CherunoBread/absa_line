@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from huggingface_hub import login
 from google_play_scraper import Sort, reviews as gp_reviews
-from Model.preprocessing import predict_topic, predict_sentiment
+from preprocessing import predict_topic, predict_sentiment
 
 # Login ke HF (ambil token dari secrets.toml)
 login(token=st.secrets.huggingface.token, add_to_git_credential=False)
